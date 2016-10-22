@@ -26,3 +26,6 @@ _制作スケジュールリンク_
 
 ## 設計資料
 _設計資料リンク_
+
+### 画面遷移図
+![画面遷移図](https://raw.githubusercontent.com/TechC-App/TaskApp/master/files/screen.png)
