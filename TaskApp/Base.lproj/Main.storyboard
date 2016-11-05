@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--タスク一覧-->
@@ -106,7 +107,7 @@
         <!--使い方-->
         <scene sceneID="EJ8-qm-FCm">
             <objects>
-                <viewController id="HDN-BJ-SiA" userLabel="使い方" customClass="ViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="使い方" id="HDN-BJ-SiA" userLabel="使い方" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4ff-Fr-SdN"/>
                         <viewControllerLayoutGuide type="bottom" id="n4Z-ey-AcS"/>
@@ -115,14 +116,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使い方" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-oV-d4H">
-                                <rect key="frame" x="77" y="178" width="167" height="123"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx8-hE-nWU">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">// FIXME
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="文言は機能実装フェーズで差し替える">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+// AttributedText</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="参考">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="太字">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="HiraKakuProN-W6"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="赤字">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HiraKakuProN-W3"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tx8-hE-nWU" firstAttribute="leading" secondItem="TaP-DV-3YL" secondAttribute="leading" id="5sV-g7-q6c"/>
+                            <constraint firstItem="n4Z-ey-AcS" firstAttribute="top" secondItem="tx8-hE-nWU" secondAttribute="bottom" id="VXJ-0g-AuA"/>
+                            <constraint firstAttribute="trailing" secondItem="tx8-hE-nWU" secondAttribute="trailing" id="Z4N-Oe-oC1"/>
+                            <constraint firstItem="tx8-hE-nWU" firstAttribute="top" secondItem="4ff-Fr-SdN" secondAttribute="bottom" id="pee-hT-1P8"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -162,7 +234,7 @@
         <!--タスク登録・確認-->
         <scene sceneID="k3F-Us-343">
             <objects>
-                <viewController id="NtG-jB-92M" userLabel="タスク登録・確認" customClass="ViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="タスク詳細" id="NtG-jB-92M" userLabel="タスク登録・確認" customClass="TaskDetailViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CHq-sx-xmG"/>
                         <viewControllerLayoutGuide type="bottom" id="1aq-L9-Cm4"/>
@@ -171,19 +243,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク登録・確認" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSi-IA-i2A">
-                                <rect key="frame" x="0.0" y="173" width="320" height="123"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM6-J4-OnG">
+                                <rect key="frame" x="20" y="111" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CnG-fE-OuM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2i-bh-LVN">
+                                <rect key="frame" x="20" y="176" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期限" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-80-Hj8">
+                                <rect key="frame" x="20" y="241" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-w9-Ik7">
+                                <rect key="frame" x="20" y="306" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFA-wU-F4g">
+                                <rect key="frame" x="128" y="172" width="156" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKo-ap-yAS">
+                                <rect key="frame" x="176" y="237" width="60" height="30"/>
+                                <state key="normal" title="期限設定"/>
+                                <connections>
+                                    <action selector="didTapLimitButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="WfE-bm-NSy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-3w-4YR">
+                                <rect key="frame" x="169" y="302" width="75" height="30"/>
+                                <state key="normal" title="場所を設定"/>
+                                <connections>
+                                    <action selector="didTapPlaceButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="zx8-i9-App"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1co-ZF-hnQ">
+                                <rect key="frame" x="128" y="107" width="156" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-Pl-O2U">
+                                <rect key="frame" x="145" y="494" width="30" height="30"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="didTapSaveButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="Niz-DH-KJF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5n2-w9-Ik7" firstAttribute="top" secondItem="nUD-80-Hj8" secondAttribute="bottom" constant="44" id="3ZF-Xn-Q5d"/>
+                            <constraint firstItem="sKo-ap-yAS" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="73C-pp-5FE"/>
+                            <constraint firstItem="T2i-bh-LVN" firstAttribute="top" secondItem="QM6-J4-OnG" secondAttribute="bottom" constant="44" id="7B2-SX-rvJ"/>
+                            <constraint firstItem="QM6-J4-OnG" firstAttribute="top" secondItem="CHq-sx-xmG" secondAttribute="bottom" constant="47" id="7os-sx-3kz"/>
+                            <constraint firstItem="TZs-3w-4YR" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="BVJ-bN-gNP"/>
+                            <constraint firstItem="QM6-J4-OnG" firstAttribute="leading" secondItem="5YL-eA-4bL" secondAttribute="leading" constant="20" id="Dk9-AJ-8nL"/>
+                            <constraint firstItem="T2i-bh-LVN" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="leading" id="GK7-lY-X5i"/>
+                            <constraint firstItem="1co-ZF-hnQ" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="trailing" constant="8" id="IUW-yb-tJt"/>
+                            <constraint firstItem="kFA-wU-F4g" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="L4X-IH-WOs"/>
+                            <constraint firstItem="sKo-ap-yAS" firstAttribute="centerY" secondItem="nUD-80-Hj8" secondAttribute="centerY" id="MMg-xT-nbu"/>
+                            <constraint firstItem="1aq-L9-Cm4" firstAttribute="top" secondItem="KJU-Pl-O2U" secondAttribute="bottom" constant="44" id="PQ9-Ko-207"/>
+                            <constraint firstItem="KJU-Pl-O2U" firstAttribute="centerX" secondItem="5YL-eA-4bL" secondAttribute="centerX" id="WIh-qO-upp"/>
+                            <constraint firstItem="nUD-80-Hj8" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="Wq4-EK-cI2"/>
+                            <constraint firstItem="kFA-wU-F4g" firstAttribute="centerY" secondItem="T2i-bh-LVN" secondAttribute="centerY" id="cUZ-hy-X5Z"/>
+                            <constraint firstItem="T2i-bh-LVN" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="chg-yH-aYa"/>
+                            <constraint firstItem="5n2-w9-Ik7" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="leading" id="fCP-0c-RJS"/>
+                            <constraint firstItem="TZs-3w-4YR" firstAttribute="centerY" secondItem="5n2-w9-Ik7" secondAttribute="centerY" id="jAJ-Il-siX"/>
+                            <constraint firstItem="kFA-wU-F4g" firstAttribute="width" secondItem="1co-ZF-hnQ" secondAttribute="width" id="jJ4-s8-kMZ"/>
+                            <constraint firstItem="5n2-w9-Ik7" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="nTg-hC-uIN"/>
+                            <constraint firstItem="nUD-80-Hj8" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="leading" id="oUb-BD-0BB"/>
+                            <constraint firstItem="nUD-80-Hj8" firstAttribute="top" secondItem="T2i-bh-LVN" secondAttribute="bottom" constant="44" id="ocb-su-Y3D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1co-ZF-hnQ" secondAttribute="trailing" constant="20" id="pOq-by-9kf"/>
+                            <constraint firstItem="kFA-wU-F4g" firstAttribute="leading" secondItem="T2i-bh-LVN" secondAttribute="trailing" constant="8" id="qBU-xN-8w1"/>
+                            <constraint firstItem="1co-ZF-hnQ" firstAttribute="centerY" secondItem="QM6-J4-OnG" secondAttribute="centerY" id="vk3-oA-yqj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qBU-xN-8w1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="gur-In-nsV"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="detailField" destination="kFA-wU-F4g" id="pTS-o3-acx"/>
+                        <outlet property="limitButton" destination="sKo-ap-yAS" id="Arp-vN-Px8"/>
+                        <outlet property="placeButton" destination="TZs-3w-4YR" id="Lya-jq-TLV"/>
+                        <outlet property="titleField" destination="1co-ZF-hnQ" id="H9U-eY-6Dq"/>
                         <segue destination="4rW-74-Ebz" kind="showDetail" id="0Z7-fs-BlH"/>
                     </connections>
                 </viewController>
