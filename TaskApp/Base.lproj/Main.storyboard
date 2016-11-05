@@ -51,19 +51,23 @@
                                     <constraint firstAttribute="height" constant="44" id="mnY-P5-xiX"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="NTS-3i-F36"/>
                                     <barButtonItem title="使い方" id="lFT-dk-V9Z">
                                         <connections>
                                             <segue destination="HDN-BJ-SiA" kind="show" id="5sj-nS-oua"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wxV-S2-UHW"/>
+                                    <barButtonItem title="カレンダー" id="s6V-Y1-e1r">
+                                        <connections>
+                                            <segue destination="4rW-74-Ebz" kind="show" id="Kaj-uK-ftY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="txr-rX-X9W"/>
                                     <barButtonItem title="新規登録" id="kZr-qN-P7q">
                                         <connections>
                                             <segue destination="NtG-jB-92M" kind="show" id="xq0-ss-psW"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="sUH-S4-ZpF"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -201,7 +205,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kb6-eb-0np" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-266" y="889"/>
+            <point key="canvasLocation" x="-292" y="938"/>
         </scene>
         <!--カレンダー-->
         <scene sceneID="FiW-XK-1Xh">
@@ -229,7 +233,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K86-JC-gYD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="640" y="219"/>
+            <point key="canvasLocation" x="161" y="938"/>
         </scene>
         <!--タスク登録・確認-->
         <scene sceneID="k3F-Us-343">
@@ -343,7 +347,6 @@ Cg
                         <outlet property="limitButton" destination="sKo-ap-yAS" id="Arp-vN-Px8"/>
                         <outlet property="placeButton" destination="TZs-3w-4YR" id="Lya-jq-TLV"/>
                         <outlet property="titleField" destination="1co-ZF-hnQ" id="H9U-eY-6Dq"/>
-                        <segue destination="4rW-74-Ebz" kind="showDetail" id="0Z7-fs-BlH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13r-9G-8uL" sceneMemberID="firstResponder"/>
