@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sFy-Wf-Wh6">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskListCell" textLabel="clv-2u-WY2" style="IBUITableViewCellStyleDefault" id="0Vv-L7-IK2">
@@ -44,22 +44,42 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gWd-Jh-eoL"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vU0-aB-u0Q">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mnY-P5-xiX"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="NTS-3i-F36"/>
+                                    <barButtonItem title="使い方" id="lFT-dk-V9Z">
+                                        <connections>
+                                            <segue destination="HDN-BJ-SiA" kind="show" id="5sj-nS-oua"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wxV-S2-UHW"/>
+                                    <barButtonItem title="新規登録" id="kZr-qN-P7q">
+                                        <connections>
+                                            <segue destination="NtG-jB-92M" kind="show" id="xq0-ss-psW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="sUH-S4-ZpF"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sFy-Wf-Wh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3eo-ES-rJS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sFy-Wf-Wh6" secondAttribute="bottom" id="LIR-IJ-GxZ"/>
+                            <constraint firstItem="vU0-aB-u0Q" firstAttribute="top" secondItem="sFy-Wf-Wh6" secondAttribute="bottom" id="DzO-bK-raK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vU0-aB-u0Q" secondAttribute="bottom" id="EPn-52-Igt"/>
+                            <constraint firstAttribute="trailing" secondItem="vU0-aB-u0Q" secondAttribute="trailing" id="L6v-5R-dza"/>
                             <constraint firstAttribute="trailing" secondItem="sFy-Wf-Wh6" secondAttribute="trailing" id="ag5-EB-Sho"/>
                             <constraint firstItem="sFy-Wf-Wh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="enC-zr-Opo"/>
+                            <constraint firstItem="vU0-aB-u0Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pEQ-gU-9kI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="タスク一覧" id="5Zf-Ed-jhe"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
-                    <connections>
-                        <segue destination="HDN-BJ-SiA" kind="showDetail" id="Os1-TS-beo"/>
-                        <segue destination="NtG-jB-92M" kind="showDetail" id="BqQ-uW-PAh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
