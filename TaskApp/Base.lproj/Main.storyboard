@@ -210,7 +210,7 @@ Cg
         <!--カレンダー-->
         <scene sceneID="FiW-XK-1Xh">
             <objects>
-                <viewController id="4rW-74-Ebz" userLabel="カレンダー" customClass="ViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="カレンダー" id="4rW-74-Ebz" userLabel="カレンダー" customClass="CalendarViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kft-OI-4h6"/>
                         <viewControllerLayoutGuide type="bottom" id="jBR-eK-zqW"/>
