@@ -24,7 +24,7 @@ _ユースケースは汎用的なケースではなく、限定的なシチュ�
 ## スケジュール
 _制作スケジュールリンク_
 
-https://mokemoko.jooto.com/boards#87811
+https://app.jooto.com/boards/87811
 
 ## 設計資料
 _設計資料リンク_
