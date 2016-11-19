@@ -85,6 +85,9 @@
                     <navigationItem key="navigationItem" title="タスク一覧" id="5Zf-Ed-jhe"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tableView" destination="sFy-Wf-Wh6" id="bgD-oA-YsF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

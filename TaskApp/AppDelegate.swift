@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MagicalRecord.setupAutoMigratingCoreDataStack()
         
         NotificationManager.sharedManager.registerNotification()
+        
+        
+        (0...10).forEach { index in
+            ModelManager.sharedManager.insertTask("task\(index)", desc: "description\(index)", date: NSDate(), place: "")
+        }
 
         return true
     }
@@ -42,7 +47,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
 
     }
-
-
 }
 

@@ -16,6 +16,7 @@ internal final class ModelManager {
     private let context = NSManagedObjectContext.MR_defaultContext()
     
     func insertTask(title: String, desc: String, date: NSDate, place: String) {
+        
         let entity = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: context) as! Task
         entity.title = title
         entity.desc  = desc
@@ -28,6 +29,7 @@ internal final class ModelManager {
         let request = NSFetchRequest()
         // from句に該当
         request.entity = NSEntityDescription.entityForName("Task", inManagedObjectContext: context)
+        // TODO: orderの指定
         return try! context.executeFetchRequest(request) as! [Task]
     }
 }
