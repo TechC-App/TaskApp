@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         MagicalRecord.setupAutoMigratingCoreDataStack()
         
+        NotificationManager.sharedManager.registerNotification()
+
         return true
     }
 

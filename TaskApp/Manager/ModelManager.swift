@@ -31,11 +31,3 @@ internal final class ModelManager {
         return try! context.executeFetchRequest(request) as! [Task]
     }
 }
-
-
-
-
-
-
-
-
