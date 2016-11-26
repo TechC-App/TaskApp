@@ -16,6 +16,9 @@ internal final class TaskListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // セルの登録
+        tableView.registerClass(TaskListTableViewCell.self, forCellReuseIdentifier: "TaskListTableViewCell")
+        
         // タスク一覧の再取得・更新
         taskList = ModelManager.sharedManager.allTask()
         tableView.reloadData()
@@ -29,8 +32,8 @@ extension TaskListViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let task = taskList[indexPath.row]
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "TaskListCell")
-        cell.textLabel?.text = task.title
+        let cell = tableView.dequeueReusableCellWithIdentifier("TaskListTableViewCell") as! TaskListTableViewCell
+        cell.update(task)
         return cell
     }
 }

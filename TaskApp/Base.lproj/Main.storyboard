@@ -22,34 +22,46 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskListCell" textLabel="clv-2u-WY2" style="IBUITableViewCellStyleDefault" id="0Vv-L7-IK2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskListTableViewCell" id="0Vv-L7-IK2" customClass="TaskListTableViewCell" customModule="TaskApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Vv-L7-IK2" id="mTG-Yd-LeV">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" placeholderIntrinsicWidth="290" placeholderIntrinsicHeight="59" text="タスク" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clv-2u-WY2">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2016/11/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWA-WM-K3M">
-                                                    <rect key="frame" x="139" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学校に行く" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTw-RT-8YA" userLabel="Title Label">
+                                                    <rect key="frame" x="0.0" y="11" width="85" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d94-UL-dvi">
-                                                    <rect key="frame" x="139" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高田馬場" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d94-UL-dvi">
+                                                    <rect key="frame" x="184" y="11" width="68" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/11/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWA-WM-K3M">
+                                                    <rect key="frame" x="93" y="11" width="83" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d94-UL-dvi" firstAttribute="centerY" secondItem="mTG-Yd-LeV" secondAttribute="centerY" id="DKV-qI-HXE"/>
+                                                <constraint firstItem="d94-UL-dvi" firstAttribute="leading" secondItem="oWA-WM-K3M" secondAttribute="trailing" constant="8" id="dRf-YT-zA1"/>
+                                                <constraint firstItem="hTw-RT-8YA" firstAttribute="centerY" secondItem="mTG-Yd-LeV" secondAttribute="centerY" id="jMB-WS-KRv"/>
+                                                <constraint firstItem="oWA-WM-K3M" firstAttribute="leading" secondItem="hTw-RT-8YA" secondAttribute="trailing" constant="8" id="pUS-7R-5zN"/>
+                                                <constraint firstItem="oWA-WM-K3M" firstAttribute="centerY" secondItem="mTG-Yd-LeV" secondAttribute="centerY" id="poW-5U-4PN"/>
+                                                <constraint firstItem="hTw-RT-8YA" firstAttribute="leading" secondItem="mTG-Yd-LeV" secondAttribute="leading" id="rKU-yJ-osf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="oWA-WM-K3M" id="3LB-zz-XHb"/>
+                                            <outlet property="placeLabel" destination="d94-UL-dvi" id="mhZ-WN-DPp"/>
+                                            <outlet property="titleLabel" destination="hTw-RT-8YA" id="Mgv-wL-TQu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
