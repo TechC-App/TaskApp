@@ -17,7 +17,7 @@ internal final class TaskListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // セルの登録
-        tableView.registerClass(TaskListTableViewCell.self, forCellReuseIdentifier: "TaskListTableViewCell")
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TaskListTableViewCell")
         
         // タスク一覧の再取得・更新
         taskList = ModelManager.sharedManager.allTask()
@@ -32,23 +32,38 @@ extension TaskListViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let task = taskList[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("TaskListTableViewCell") as! TaskListTableViewCell
-        cell.update(task)
+        let cell = tableView.dequeueReusableCellWithIdentifier("TaskListTableViewCell")!
+        cell.textLabel?.text = cellText(task)
         return cell
+    }
+    
+    /// 完了ボタンのラベル変更
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "完了"
     }
 }
 
 extension TaskListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // FIXME: 暫定でアラートで詳細を表示
+        // 詳細画面に遷移
         let task = taskList[indexPath.row]
-        let alert = UIAlertController(title: nil,
-                                     message: task.desc,
-                              preferredStyle: .Alert)
-        let button = UIAlertAction(title: "OK",
-                                    style: .Default,
-            handler: nil)
-        alert.addAction(button)
-        presentViewController(alert, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("TaskDetailViewController") as! TaskDetailViewController
+        viewController.task = task
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    /// 完了時のアクション
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // TODO: CoreDataの更新
+        taskList.removeAtIndex(indexPath.row)
+        tableView.reloadData()
+    }
+}
+
+// FIXME: 後で削除
+extension TaskListViewController {
+    func cellText(task: Task) -> String {
+        return "\(task.title!)   \(task.date!)   \(task.place!)"
     }
 }

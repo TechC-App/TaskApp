@@ -25,4 +25,25 @@ internal final class TaskDetailViewController: UIViewController {
     }
     @IBAction private func didTapSaveButton(sender: UIButton) {
     }
+    
+    var task: Task?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        update()
+    }
+    
+    private func update() {
+        // 詳細・登録を兼ねるので、対象のTaskが存在する場合のみ表示を更新する
+        if let task = task {
+            titleField.text = task.title
+            detailField.text = task.desc
+            limitButton.titleLabel?.text = "\(task.date!)"
+            placeButton.titleLabel?.text = task.place
+        }
+    }
 }
