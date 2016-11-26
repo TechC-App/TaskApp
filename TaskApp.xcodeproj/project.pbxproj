@@ -37,11 +37,11 @@
 
 /* Begin PBXFileReference section */
 		18638FF5BFF4802DBECD4584 /* Pods-TaskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp.release.xcconfig"; sourceTree = "<group>"; };
-		AE1ECE891DCD6A4D00B51AC0 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = ViewControllers/TaskListViewController.swift; sourceTree = "<group>"; };
-		AE1ECE8B1DCD757400B51AC0 /* TaskDetailViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskDetailViewControler.swift; path = ViewControllers/TaskDetailViewControler.swift; sourceTree = "<group>"; };
-		AE1ECE8D1DCD80EB00B51AC0 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = ViewControllers/CalendarViewController.swift; sourceTree = "<group>"; };
-		AE427FB51DDFEDA100EF1834 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = Manager/ModelManager.swift; sourceTree = "<group>"; };
-		AE427FB71DDFEDB700EF1834 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = Manager/NotificationManager.swift; sourceTree = "<group>"; };
+		AE1ECE891DCD6A4D00B51AC0 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		AE1ECE8B1DCD757400B51AC0 /* TaskDetailViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskDetailViewControler.swift; path = TaskDetailViewControler.swift; sourceTree = "<group>"; };
+		AE1ECE8D1DCD80EB00B51AC0 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AE427FB51DDFEDA100EF1834 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelManager.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		AE427FB71DDFEDB700EF1834 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AE78AA1C1DB1C76700069A6A /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE78AA1F1DB1C76700069A6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE78AA241DB1C76700069A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,8 +49,8 @@
 		AE78AA291DB1C76700069A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE78AA2B1DB1C76700069A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEDA24D91DD6B53800858D8F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		AEDA24E21DD6B70600858D8F /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "Model/Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AEDA24E31DD6B70600858D8F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Model/Task.swift; sourceTree = "<group>"; };
+		AEDA24E21DD6B70600858D8F /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AEDA24E31DD6B70600858D8F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Task.swift; sourceTree = "<group>"; };
 		DBED16D89051B8ED62F2EE3D /* Pods_TaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2E1DBF595BA08A3D4D0E16 /* Pods-TaskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,11 +87,12 @@
 		AE1ECE881DCD69EE00B51AC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE1ECE891DCD6A4D00B51AC0 /* TaskListViewController.swift */,
-				AE1ECE8B1DCD757400B51AC0 /* TaskDetailViewControler.swift */,
 				AE1ECE8D1DCD80EB00B51AC0 /* CalendarViewController.swift */,
+				AE1ECE8B1DCD757400B51AC0 /* TaskDetailViewControler.swift */,
+				AE1ECE891DCD6A4D00B51AC0 /* TaskListViewController.swift */,
 			);
 			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AE427FB41DDFED6400EF1834 /* Manager */ = {
@@ -101,15 +102,24 @@
 				AE427FB71DDFEDB700EF1834 /* NotificationManager.swift */,
 			);
 			name = Manager;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AE5FF57A1DE90F4F00D88E2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		AE78AA131DB1C76700069A6A = {
 			isa = PBXGroup;
 			children = (
-				AE78AA1E1DB1C76700069A6A /* TaskApp */,
-				AE78AA1D1DB1C76700069A6A /* Products */,
-				7D7EDE5E364D0B1921DD8CDD /* Pods */,
 				6FB6D62672671A008DCD4C34 /* Frameworks */,
+				7D7EDE5E364D0B1921DD8CDD /* Pods */,
+				AE78AA1D1DB1C76700069A6A /* Products */,
+				AE78AA1E1DB1C76700069A6A /* TaskApp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,12 +136,13 @@
 			children = (
 				AE427FB41DDFED6400EF1834 /* Manager */,
 				AEDA24DB1DD6B5FF00858D8F /* Model */,
+				AE5FF57A1DE90F4F00D88E2E /* View */,
 				AE1ECE881DCD69EE00B51AC0 /* ViewControllers */,
 				AE78AA1F1DB1C76700069A6A /* AppDelegate.swift */,
-				AE78AA231DB1C76700069A6A /* Main.storyboard */,
 				AE78AA261DB1C76700069A6A /* Assets.xcassets */,
-				AE78AA281DB1C76700069A6A /* LaunchScreen.storyboard */,
 				AE78AA2B1DB1C76700069A6A /* Info.plist */,
+				AE78AA281DB1C76700069A6A /* LaunchScreen.storyboard */,
+				AE78AA231DB1C76700069A6A /* Main.storyboard */,
 				AEDA24D81DD6B53800858D8F /* Model.xcdatamodeld */,
 			);
 			path = TaskApp;
@@ -144,6 +155,7 @@
 				AEDA24E31DD6B70600858D8F /* Task.swift */,
 			);
 			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +302,7 @@
 				AE78AA241DB1C76700069A6A /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		AE78AA281DB1C76700069A6A /* LaunchScreen.storyboard */ = {
@@ -298,6 +311,7 @@
 				AE78AA291DB1C76700069A6A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
