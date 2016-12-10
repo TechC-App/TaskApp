@@ -111,6 +111,59 @@
             </objects>
             <point key="canvasLocation" x="-753" y="219"/>
         </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="fZt-My-TCs">
+            <objects>
+                <viewController id="438-F3-qfU" customClass="SideMenuViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bRb-yU-ti2"/>
+                        <viewControllerLayoutGuide type="bottom" id="KlP-HN-73p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Taa-vE-lQI">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAD-sy-m5T">
+                                <rect key="frame" x="0.0" y="0.0" width="94" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="8cd-WE-twD"/>
+                                    <constraint firstAttribute="width" constant="94" id="ap5-Gy-e1W"/>
+                                </constraints>
+                                <state key="normal" title="新規登録"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfx-T4-bD5">
+                                <rect key="frame" x="0.0" y="66" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WKx-p6-9MS"/>
+                                </constraints>
+                                <state key="normal" title="使い方"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRM-cL-CQ0">
+                                <rect key="frame" x="0.0" y="36" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5lb-Vh-aM8"/>
+                                </constraints>
+                                <state key="normal" title="カレンダー"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LAD-sy-m5T" firstAttribute="leading" secondItem="Taa-vE-lQI" secondAttribute="leading" id="Ak1-10-Tck"/>
+                            <constraint firstItem="kRM-cL-CQ0" firstAttribute="leading" secondItem="Taa-vE-lQI" secondAttribute="leading" id="ERV-cE-j30"/>
+                            <constraint firstItem="Mfx-T4-bD5" firstAttribute="top" secondItem="kRM-cL-CQ0" secondAttribute="bottom" id="G1V-Zx-zr8"/>
+                            <constraint firstItem="Mfx-T4-bD5" firstAttribute="leading" secondItem="Taa-vE-lQI" secondAttribute="leading" id="Zim-Q3-UDn"/>
+                            <constraint firstItem="LAD-sy-m5T" firstAttribute="top" secondItem="Taa-vE-lQI" secondAttribute="top" id="oDk-nR-6qv"/>
+                            <constraint firstItem="kRM-cL-CQ0" firstAttribute="top" secondItem="LAD-sy-m5T" secondAttribute="bottom" id="t9v-lm-uRj"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="100"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5a-Yu-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="499"/>
+        </scene>
         <!--使い方-->
         <scene sceneID="EJ8-qm-FCm">
             <objects>

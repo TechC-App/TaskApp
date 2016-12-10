@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import SideMenu
 
 internal final class TaskListViewController: UIViewController {
     /// タスク一覧
     private var taskList = [Task]()
+    
+    var menuAnimator: MenuTransitionAnimator!
     
     @IBOutlet weak var tableView: UITableView!
     /// 新規登録遷移

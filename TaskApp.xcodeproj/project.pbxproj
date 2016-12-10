@@ -15,6 +15,7 @@
 		AE5FF57C1DE9111300D88E2E /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5FF57B1DE9111300D88E2E /* TaskListTableViewCell.swift */; };
 		AE6A459F1DFB9A3B00D151C5 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6A459C1DFB9A2200D151C5 /* SideMenu.framework */; };
 		AE6A45A11DFB9A6800D151C5 /* SideMenu.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = AE6A459C1DFB9A2200D151C5 /* SideMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE6A45A61DFBA66F00D151C5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6A45A51DFBA66F00D151C5 /* SideMenuViewController.swift */; };
 		AE78AA201DB1C76700069A6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE78AA1F1DB1C76700069A6A /* AppDelegate.swift */; };
 		AE78AA251DB1C76700069A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE78AA231DB1C76700069A6A /* Main.storyboard */; };
 		AE78AA271DB1C76700069A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE78AA261DB1C76700069A6A /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		AE427FB71DDFEDB700EF1834 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AE5FF57B1DE9111300D88E2E /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
 		AE6A45971DFB9A2100D151C5 /* SideMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SideMenu.xcodeproj; path = "Side-Menu.iOS/SideMenu.xcodeproj"; sourceTree = "<group>"; };
+		AE6A45A51DFBA66F00D151C5 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		AE78AA1C1DB1C76700069A6A /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE78AA1F1DB1C76700069A6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE78AA241DB1C76700069A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				AE1ECE8D1DCD80EB00B51AC0 /* CalendarViewController.swift */,
 				AE1ECE8B1DCD757400B51AC0 /* TaskDetailViewControler.swift */,
 				AE1ECE891DCD6A4D00B51AC0 /* TaskListViewController.swift */,
+				AE6A45A51DFBA66F00D151C5 /* SideMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				AE427FB61DDFEDA100EF1834 /* ModelManager.swift in Sources */,
 				AE1ECE8C1DCD757400B51AC0 /* TaskDetailViewControler.swift in Sources */,
 				AE427FB81DDFEDB700EF1834 /* NotificationManager.swift in Sources */,
+				AE6A45A61DFBA66F00D151C5 /* SideMenuViewController.swift in Sources */,
 				AEDA24DA1DD6B53800858D8F /* Model.xcdatamodeld in Sources */,
 				AE5FF57C1DE9111300D88E2E /* TaskListTableViewCell.swift in Sources */,
 				AE78AA201DB1C76700069A6A /* AppDelegate.swift in Sources */,
