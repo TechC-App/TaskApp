@@ -32,4 +32,7 @@ internal final class ModelManager {
         // TODO: orderの指定
         return try! context.executeFetchRequest(request) as! [Task]
     }
+    func saveTask(task: Task) {
+        try! context.save()
+    }
 }

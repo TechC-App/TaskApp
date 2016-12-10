@@ -15,15 +15,34 @@ internal final class TaskDetailViewController: UIViewController {
     /// タイトル
     @IBOutlet private weak var titleField: UITextField!
     @IBOutlet private weak var detailField: UITextField!
-    @IBOutlet private weak var limitButton: UIButton!
+    @IBOutlet private weak var limitButton: UILabel!
     @IBOutlet private weak var placeButton: UIButton!
+    @IBOutlet private weak var datePicker: UIDatePicker!
     
     // MARK: IBAction
-    @IBAction private func didTapLimitButton(sender: UIButton) {
-    }
     @IBAction private func didTapPlaceButton(sender: UIButton) {
     }
+    /// 保存ボタンタップ
     @IBAction private func didTapSaveButton(sender: UIButton) {
+        guard let task = task else {
+            // 例外処理
+            return
+        }
+        ModelManager.sharedManager.saveTask(task)
+
+    }
+    /// 日付選択
+    @IBAction private func didChangePickerValue(sender: UIDatePicker) {
+        task?.date = sender.date
+        update()
+    }
+    /// タイトル更新
+    @IBAction private func didChangeTitle(sender: UITextField) {
+        task?.title = sender.text
+    }
+    /// 詳細更新
+    @IBAction private func didChangeDetail(sender: UITextField) {
+        task?.desc = sender.text
     }
     
     var task: Task?
@@ -42,8 +61,24 @@ internal final class TaskDetailViewController: UIViewController {
         if let task = task {
             titleField.text = task.title
             detailField.text = task.desc
-            limitButton.titleLabel?.text = "\(task.date!)"
+            limitButton.text = "\(task.date!)"
             placeButton.titleLabel?.text = task.place
         }
+    }
+}
+
+extension TaskDetailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        // 対象のTextFieldに応じて出しわけ
+        if textField == titleField {
+            task?.title = textField.text
+        } else if textField == detailField {
+            task?.desc = textField.text
+        }
+        
+        return true
     }
 }

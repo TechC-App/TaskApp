@@ -18,6 +18,10 @@ internal final class TaskListViewController: UIViewController {
         super.viewDidLoad()
         // セルの登録
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TaskListTableViewCell")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         // タスク一覧の再取得・更新
         taskList = ModelManager.sharedManager.allTask()

@@ -33,7 +33,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -281,14 +281,11 @@ Cg
                                 <rect key="frame" x="128" y="172" width="156" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKo-ap-yAS">
-                                <rect key="frame" x="176" y="237" width="60" height="30"/>
-                                <state key="normal" title="期限設定"/>
                                 <connections>
-                                    <action selector="didTapLimitButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="WfE-bm-NSy"/>
+                                    <action selector="didChangeDetail:" destination="NtG-jB-92M" eventType="valueChanged" id="edH-xP-KmI"/>
+                                    <outlet property="delegate" destination="NtG-jB-92M" id="QcS-bM-px1"/>
                                 </connections>
-                            </button>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-3w-4YR">
                                 <rect key="frame" x="169" y="302" width="75" height="30"/>
                                 <state key="normal" title="場所を設定"/>
@@ -300,9 +297,28 @@ Cg
                                 <rect key="frame" x="128" y="107" width="156" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didChangeTitle:" destination="NtG-jB-92M" eventType="valueChanged" id="Mud-af-sTF"/>
+                                    <outlet property="delegate" destination="NtG-jB-92M" id="wPm-lx-7Ab"/>
+                                </connections>
                             </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-7B-rUQ">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="503022819.14815497">
+                                    <!--2016-12-10 00:33:39 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="didChangePickerValue:" destination="NtG-jB-92M" eventType="valueChanged" id="njZ-N2-FTe"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-1t-ucA">
+                                <rect key="frame" x="128" y="241" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-Pl-O2U">
-                                <rect key="frame" x="145" y="494" width="30" height="30"/>
+                                <rect key="frame" x="145" y="314" width="30" height="30"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="didTapSaveButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="Niz-DH-KJF"/>
@@ -312,7 +328,6 @@ Cg
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5n2-w9-Ik7" firstAttribute="top" secondItem="nUD-80-Hj8" secondAttribute="bottom" constant="44" id="3ZF-Xn-Q5d"/>
-                            <constraint firstItem="sKo-ap-yAS" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="73C-pp-5FE"/>
                             <constraint firstItem="T2i-bh-LVN" firstAttribute="top" secondItem="QM6-J4-OnG" secondAttribute="bottom" constant="44" id="7B2-SX-rvJ"/>
                             <constraint firstItem="QM6-J4-OnG" firstAttribute="top" secondItem="CHq-sx-xmG" secondAttribute="bottom" constant="47" id="7os-sx-3kz"/>
                             <constraint firstItem="TZs-3w-4YR" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="BVJ-bN-gNP"/>
@@ -320,25 +335,32 @@ Cg
                             <constraint firstItem="T2i-bh-LVN" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="leading" id="GK7-lY-X5i"/>
                             <constraint firstItem="1co-ZF-hnQ" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="trailing" constant="8" id="IUW-yb-tJt"/>
                             <constraint firstItem="kFA-wU-F4g" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="L4X-IH-WOs"/>
-                            <constraint firstItem="sKo-ap-yAS" firstAttribute="centerY" secondItem="nUD-80-Hj8" secondAttribute="centerY" id="MMg-xT-nbu"/>
+                            <constraint firstItem="1aq-L9-Cm4" firstAttribute="top" secondItem="0Kt-7B-rUQ" secondAttribute="bottom" id="N1x-Ej-Hct"/>
                             <constraint firstItem="1aq-L9-Cm4" firstAttribute="top" secondItem="KJU-Pl-O2U" secondAttribute="bottom" constant="44" id="PQ9-Ko-207"/>
+                            <constraint firstItem="zL4-1t-ucA" firstAttribute="leading" secondItem="nUD-80-Hj8" secondAttribute="trailing" constant="8" id="SYQ-ag-Hyx"/>
+                            <constraint firstItem="0Kt-7B-rUQ" firstAttribute="top" secondItem="KJU-Pl-O2U" secondAttribute="bottom" constant="8" id="Svi-yc-oEJ"/>
                             <constraint firstItem="KJU-Pl-O2U" firstAttribute="centerX" secondItem="5YL-eA-4bL" secondAttribute="centerX" id="WIh-qO-upp"/>
                             <constraint firstItem="nUD-80-Hj8" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="Wq4-EK-cI2"/>
                             <constraint firstItem="kFA-wU-F4g" firstAttribute="centerY" secondItem="T2i-bh-LVN" secondAttribute="centerY" id="cUZ-hy-X5Z"/>
                             <constraint firstItem="T2i-bh-LVN" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="chg-yH-aYa"/>
                             <constraint firstItem="5n2-w9-Ik7" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="leading" id="fCP-0c-RJS"/>
+                            <constraint firstAttribute="trailing" secondItem="0Kt-7B-rUQ" secondAttribute="trailing" id="hiP-7t-wNg"/>
+                            <constraint firstItem="zL4-1t-ucA" firstAttribute="top" secondItem="kFA-wU-F4g" secondAttribute="bottom" constant="39" id="iLX-HK-r3v"/>
                             <constraint firstItem="TZs-3w-4YR" firstAttribute="centerY" secondItem="5n2-w9-Ik7" secondAttribute="centerY" id="jAJ-Il-siX"/>
                             <constraint firstItem="kFA-wU-F4g" firstAttribute="width" secondItem="1co-ZF-hnQ" secondAttribute="width" id="jJ4-s8-kMZ"/>
                             <constraint firstItem="5n2-w9-Ik7" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="nTg-hC-uIN"/>
                             <constraint firstItem="nUD-80-Hj8" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="leading" id="oUb-BD-0BB"/>
                             <constraint firstItem="nUD-80-Hj8" firstAttribute="top" secondItem="T2i-bh-LVN" secondAttribute="bottom" constant="44" id="ocb-su-Y3D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1co-ZF-hnQ" secondAttribute="trailing" constant="20" id="pOq-by-9kf"/>
+                            <constraint firstAttribute="trailing" secondItem="zL4-1t-ucA" secondAttribute="trailing" constant="40" id="pXu-Vh-9ad"/>
                             <constraint firstItem="kFA-wU-F4g" firstAttribute="leading" secondItem="T2i-bh-LVN" secondAttribute="trailing" constant="8" id="qBU-xN-8w1"/>
+                            <constraint firstItem="0Kt-7B-rUQ" firstAttribute="leading" secondItem="5YL-eA-4bL" secondAttribute="leading" id="rag-fM-QxF"/>
                             <constraint firstItem="1co-ZF-hnQ" firstAttribute="centerY" secondItem="QM6-J4-OnG" secondAttribute="centerY" id="vk3-oA-yqj"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qBU-xN-8w1"/>
+                                <exclude reference="PQ9-Ko-207"/>
                             </mask>
                         </variation>
                     </view>
@@ -346,8 +368,9 @@ Cg
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="datePicker" destination="0Kt-7B-rUQ" id="wEl-Cd-Hts"/>
                         <outlet property="detailField" destination="kFA-wU-F4g" id="pTS-o3-acx"/>
-                        <outlet property="limitButton" destination="sKo-ap-yAS" id="Arp-vN-Px8"/>
+                        <outlet property="limitButton" destination="zL4-1t-ucA" id="JEv-iH-Gjh"/>
                         <outlet property="placeButton" destination="TZs-3w-4YR" id="Lya-jq-TLV"/>
                         <outlet property="titleField" destination="1co-ZF-hnQ" id="H9U-eY-6Dq"/>
                     </connections>
