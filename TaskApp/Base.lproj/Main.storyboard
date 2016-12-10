@@ -65,7 +65,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="txr-rX-X9W"/>
                                     <barButtonItem title="新規登録" id="kZr-qN-P7q">
                                         <connections>
-                                            <segue destination="NtG-jB-92M" kind="show" id="xq0-ss-psW"/>
+                                            <action selector="moveTaskRegistration:" destination="BYZ-38-t0r" id="shC-g1-zv8"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -250,7 +250,7 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM6-J4-OnG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM6-J4-OnG">
                                 <rect key="frame" x="20" y="111" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="CnG-fE-OuM"/>
@@ -259,46 +259,44 @@ Cg
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2i-bh-LVN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="詳細" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2i-bh-LVN">
                                 <rect key="frame" x="20" y="176" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期限" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-80-Hj8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="期限" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-80-Hj8">
                                 <rect key="frame" x="20" y="241" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-w9-Ik7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="場所" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-w9-Ik7">
                                 <rect key="frame" x="20" y="306" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFA-wU-F4g">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFA-wU-F4g">
                                 <rect key="frame" x="128" y="172" width="156" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="didChangeDetail:" destination="NtG-jB-92M" eventType="valueChanged" id="edH-xP-KmI"/>
                                     <outlet property="delegate" destination="NtG-jB-92M" id="QcS-bM-px1"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-3w-4YR">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-3w-4YR">
                                 <rect key="frame" x="169" y="302" width="75" height="30"/>
                                 <state key="normal" title="場所を設定"/>
                                 <connections>
                                     <action selector="didTapPlaceButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="zx8-i9-App"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1co-ZF-hnQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1co-ZF-hnQ">
                                 <rect key="frame" x="128" y="107" width="156" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="didChangeTitle:" destination="NtG-jB-92M" eventType="valueChanged" id="Mud-af-sTF"/>
                                     <outlet property="delegate" destination="NtG-jB-92M" id="wPm-lx-7Ab"/>
                                 </connections>
                             </textField>
@@ -311,19 +309,12 @@ Cg
                                     <action selector="didChangePickerValue:" destination="NtG-jB-92M" eventType="valueChanged" id="njZ-N2-FTe"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-1t-ucA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-1t-ucA">
                                 <rect key="frame" x="128" y="241" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-Pl-O2U">
-                                <rect key="frame" x="145" y="314" width="30" height="30"/>
-                                <state key="normal" title="保存"/>
-                                <connections>
-                                    <action selector="didTapSaveButton:" destination="NtG-jB-92M" eventType="touchUpInside" id="Niz-DH-KJF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -336,10 +327,7 @@ Cg
                             <constraint firstItem="1co-ZF-hnQ" firstAttribute="leading" secondItem="QM6-J4-OnG" secondAttribute="trailing" constant="8" id="IUW-yb-tJt"/>
                             <constraint firstItem="kFA-wU-F4g" firstAttribute="centerX" secondItem="1co-ZF-hnQ" secondAttribute="centerX" id="L4X-IH-WOs"/>
                             <constraint firstItem="1aq-L9-Cm4" firstAttribute="top" secondItem="0Kt-7B-rUQ" secondAttribute="bottom" id="N1x-Ej-Hct"/>
-                            <constraint firstItem="1aq-L9-Cm4" firstAttribute="top" secondItem="KJU-Pl-O2U" secondAttribute="bottom" constant="44" id="PQ9-Ko-207"/>
                             <constraint firstItem="zL4-1t-ucA" firstAttribute="leading" secondItem="nUD-80-Hj8" secondAttribute="trailing" constant="8" id="SYQ-ag-Hyx"/>
-                            <constraint firstItem="0Kt-7B-rUQ" firstAttribute="top" secondItem="KJU-Pl-O2U" secondAttribute="bottom" constant="8" id="Svi-yc-oEJ"/>
-                            <constraint firstItem="KJU-Pl-O2U" firstAttribute="centerX" secondItem="5YL-eA-4bL" secondAttribute="centerX" id="WIh-qO-upp"/>
                             <constraint firstItem="nUD-80-Hj8" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="Wq4-EK-cI2"/>
                             <constraint firstItem="kFA-wU-F4g" firstAttribute="centerY" secondItem="T2i-bh-LVN" secondAttribute="centerY" id="cUZ-hy-X5Z"/>
                             <constraint firstItem="T2i-bh-LVN" firstAttribute="width" secondItem="QM6-J4-OnG" secondAttribute="width" id="chg-yH-aYa"/>
@@ -360,7 +348,6 @@ Cg
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qBU-xN-8w1"/>
-                                <exclude reference="PQ9-Ko-207"/>
                             </mask>
                         </variation>
                     </view>
@@ -377,7 +364,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13r-9G-8uL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="219"/>
+            <point key="canvasLocation" x="89" y="214"/>
         </scene>
     </scenes>
 </document>

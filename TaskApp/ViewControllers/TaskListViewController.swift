@@ -13,6 +13,11 @@ internal final class TaskListViewController: UIViewController {
     private var taskList = [Task]()
     
     @IBOutlet weak var tableView: UITableView!
+    /// 新規登録遷移
+    @IBAction private func moveTaskRegistration(sender: UIBarButtonItem) {
+        let task = ModelManager.sharedManager.createTask()
+        moveDetailViewController(task: task)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,10 @@ internal final class TaskListViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        update()
+    }
+    
+    private func update() {
         // タスク一覧の再取得・更新
         taskList = ModelManager.sharedManager.allTask()
         tableView.reloadData()
@@ -45,23 +54,29 @@ extension TaskListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         return "完了"
     }
+    
+    /// 詳細画面への遷移
+    private func moveDetailViewController(task task: Task) {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("TaskDetailViewController") as! TaskDetailViewController
+        viewController.task = task
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension TaskListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // 詳細画面に遷移
         let task = taskList[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("TaskDetailViewController") as! TaskDetailViewController
-        viewController.task = task
-        navigationController?.pushViewController(viewController, animated: true)
+        moveDetailViewController(task: task)
     }
     
     /// 完了時のアクション
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        // TODO: CoreDataの更新
-        taskList.removeAtIndex(indexPath.row)
-        tableView.reloadData()
+        
+        let task = taskList[indexPath.row]
+        ModelManager.sharedManager.deleteTask(task)
+        update()
     }
 }
 

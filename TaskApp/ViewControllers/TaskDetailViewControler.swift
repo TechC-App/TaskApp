@@ -22,27 +22,12 @@ internal final class TaskDetailViewController: UIViewController {
     // MARK: IBAction
     @IBAction private func didTapPlaceButton(sender: UIButton) {
     }
-    /// 保存ボタンタップ
-    @IBAction private func didTapSaveButton(sender: UIButton) {
-        guard let task = task else {
-            // 例外処理
-            return
-        }
-        ModelManager.sharedManager.saveTask(task)
 
-    }
     /// 日付選択
     @IBAction private func didChangePickerValue(sender: UIDatePicker) {
         task?.date = sender.date
+        save()
         update()
-    }
-    /// タイトル更新
-    @IBAction private func didChangeTitle(sender: UITextField) {
-        task?.title = sender.text
-    }
-    /// 詳細更新
-    @IBAction private func didChangeDetail(sender: UITextField) {
-        task?.desc = sender.text
     }
     
     var task: Task?
@@ -54,6 +39,15 @@ internal final class TaskDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         update()
+    }
+    
+    /// 保存
+    private func save() {
+        guard let task = task else {
+            // 例外処理
+            return
+        }
+        ModelManager.sharedManager.saveTask(task)
     }
     
     private func update() {
@@ -78,6 +72,7 @@ extension TaskDetailViewController: UITextFieldDelegate {
         } else if textField == detailField {
             task?.desc = textField.text
         }
+        save()
         
         return true
     }

@@ -15,6 +15,19 @@ internal final class ModelManager {
     
     private let context = NSManagedObjectContext.MR_defaultContext()
     
+    func createTask() -> Task {
+        let task = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: context) as! Task
+        task.title = ""
+        task.desc = ""
+        task.date = NSDate()
+        task.place = ""
+        return task
+    }
+    
+    func deleteTask(task: Task) {
+        task.MR_deleteEntityInContext(context)
+    }
+    
     func insertTask(title: String, desc: String, date: NSDate, place: String) {
         
         let entity = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: context) as! Task
