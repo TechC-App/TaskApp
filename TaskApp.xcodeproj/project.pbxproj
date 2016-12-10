@@ -13,6 +13,8 @@
 		AE427FB61DDFEDA100EF1834 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE427FB51DDFEDA100EF1834 /* ModelManager.swift */; };
 		AE427FB81DDFEDB700EF1834 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE427FB71DDFEDB700EF1834 /* NotificationManager.swift */; };
 		AE5FF57C1DE9111300D88E2E /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5FF57B1DE9111300D88E2E /* TaskListTableViewCell.swift */; };
+		AE6A459F1DFB9A3B00D151C5 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6A459C1DFB9A2200D151C5 /* SideMenu.framework */; };
+		AE6A45A11DFB9A6800D151C5 /* SideMenu.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = AE6A459C1DFB9A2200D151C5 /* SideMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE78AA201DB1C76700069A6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE78AA1F1DB1C76700069A6A /* AppDelegate.swift */; };
 		AE78AA251DB1C76700069A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE78AA231DB1C76700069A6A /* Main.storyboard */; };
 		AE78AA271DB1C76700069A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE78AA261DB1C76700069A6A /* Assets.xcassets */; };
@@ -23,7 +25,35 @@
 		E25369C930916CA6A61118B6 /* Pods_TaskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBED16D89051B8ED62F2EE3D /* Pods_TaskApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE6A459B1DFB9A2200D151C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE6A45971DFB9A2100D151C5 /* SideMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50B42F001A6A879C00B05352;
+			remoteInfo = SideMenu;
+		};
+		AE6A459D1DFB9A2900D151C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE6A45971DFB9A2100D151C5 /* SideMenu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B42EFF1A6A879C00B05352;
+			remoteInfo = SideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		AE6A45A01DFB9A4F00D151C5 /* Copy Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE6A45A11DFB9A6800D151C5 /* SideMenu.framework in Copy Framework */,
+			);
+			name = "Copy Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEDA24BB1DD6ADE800858D8F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +74,7 @@
 		AE427FB51DDFEDA100EF1834 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		AE427FB71DDFEDB700EF1834 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AE5FF57B1DE9111300D88E2E /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
+		AE6A45971DFB9A2100D151C5 /* SideMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SideMenu.xcodeproj; path = "Side-Menu.iOS/SideMenu.xcodeproj"; sourceTree = "<group>"; };
 		AE78AA1C1DB1C76700069A6A /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE78AA1F1DB1C76700069A6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE78AA241DB1C76700069A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6A459F1DFB9A3B00D151C5 /* SideMenu.framework in Frameworks */,
 				E25369C930916CA6A61118B6 /* Pods_TaskApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,9 +145,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AE6A45981DFB9A2100D151C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE6A459C1DFB9A2200D151C5 /* SideMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AE78AA131DB1C76700069A6A = {
 			isa = PBXGroup;
 			children = (
+				AE6A45971DFB9A2100D151C5 /* SideMenu.xcodeproj */,
 				6FB6D62672671A008DCD4C34 /* Frameworks */,
 				7D7EDE5E364D0B1921DD8CDD /* Pods */,
 				AE78AA1D1DB1C76700069A6A /* Products */,
@@ -171,10 +212,12 @@
 				AEDA24BB1DD6ADE800858D8F /* Embed Frameworks */,
 				116DC1E9E408BF19693BB5DA /* 📦 Embed Pods Frameworks */,
 				F0B5D659809110F581F76F2F /* 📦 Copy Pods Resources */,
+				AE6A45A01DFB9A4F00D151C5 /* Copy Framework */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AE6A459E1DFB9A2900D151C5 /* PBXTargetDependency */,
 			);
 			name = TaskApp;
 			productName = TaskApp;
@@ -207,12 +250,28 @@
 			mainGroup = AE78AA131DB1C76700069A6A;
 			productRefGroup = AE78AA1D1DB1C76700069A6A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AE6A45981DFB9A2100D151C5 /* Products */;
+					ProjectRef = AE6A45971DFB9A2100D151C5 /* SideMenu.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AE78AA1B1DB1C76700069A6A /* TaskApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AE6A459C1DFB9A2200D151C5 /* SideMenu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SideMenu.framework;
+			remoteRef = AE6A459B1DFB9A2200D151C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AE78AA1A1DB1C76700069A6A /* Resources */ = {
@@ -294,6 +353,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE6A459E1DFB9A2900D151C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SideMenu;
+			targetProxy = AE6A459D1DFB9A2900D151C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE78AA231DB1C76700069A6A /* Main.storyboard */ = {

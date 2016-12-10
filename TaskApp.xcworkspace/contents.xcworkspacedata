@@ -5,6 +5,9 @@
       location = "group:TaskApp.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Side-Menu.iOS/SideMenu.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
