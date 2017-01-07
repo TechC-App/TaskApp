@@ -26,6 +26,10 @@ internal final class TaskListViewController: UIViewController {
         super.viewDidLoad()
         // セルの登録
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TaskListTableViewCell")
+        
+        menuAnimator = MenuTransitionAnimator(mode: .Presentation, shouldPassEventsOutsideMenu: false) { [unowned self] in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -87,5 +91,25 @@ extension TaskListViewController: UITableViewDelegate {
 extension TaskListViewController {
     func cellText(task: Task) -> String {
         return "\(task.title!)   \(task.date!)   \(task.place!)"
+    }
+}
+
+extension TaskListViewController: UIViewControllerTransitioningDelegate {
+    
+    /// Segue設定
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let menu = segue.destinationViewController as! SideMenuViewController
+        menu.transitioningDelegate = self
+        menu.modalPresentationStyle = .Custom
+    }
+    
+    /// 開くときのアニメーション設定
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return menuAnimator
+    }
+    
+    /// 閉じるときのアニメーション設定
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return MenuTransitionAnimator(mode: .Dismissal)
     }
 }
